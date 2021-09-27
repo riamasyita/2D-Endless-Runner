@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class UIGameOverController : MonoBehaviour
 {
-    // Update is called once per frame
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // reload
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("2D Endless Runner");
     }
 }
